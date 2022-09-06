@@ -6,7 +6,7 @@ import { btnReset, v } from '../../styles/variables';
 export const SSidebar = styled.div`
   width: ${({ isOpen }) => (isOpen ? v.sidebarWidth : 'auto')};
   background: ${({ theme }) => theme.white};
-  height: 100vh;
+  height: 100%;
   padding: ${v.lgSpacing};
 
   display: flex;

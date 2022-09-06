@@ -1,7 +1,7 @@
 import * as SelectPrimitive from '@radix-ui/react-select';
 import styled from 'styled-components';
 
-import { btnReset, v } from '../styles/variables';
+import { btnReset, v } from '../../styles/variables';
 
 export const SContainer = styled.div`
   padding-bottom: 20px;
@@ -29,11 +29,12 @@ export const SContainerCard = styled.div`
 `;
 
 export const SEmpty = styled.div`
-  width: 335px;
+  width: 302px;
 `;
 
 export const SWrapperFilter = styled.div`
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   margin: ${v.lgSpacing} 0;
   gap: 10px;
@@ -49,7 +50,7 @@ export const SSelectTrigger = styled(SelectPrimitive.SelectTrigger)`
   font-size: 13px;
   line-height: 1;
   height: 35px;
-  width: 200px;
+  width: 205px;
   gap: 5px;
   background: ${({ theme }) => theme.white};
   color: ${({ theme }) => theme.text};
@@ -130,7 +131,7 @@ export const SSearch = styled.div`
   box-shadow: 3px 3px 5px 3px ${({ theme }) => theme.grayLight};
   border-radius: 4px;
   color: ${({ theme }) => theme.grayLight};
-
+  
   display: flex;
   align-items: center;
   padding-left: 15px;
@@ -139,8 +140,8 @@ export const SSearch = styled.div`
     padding: 0 ${v.smSpacing};
     font-family: inherit;
     letter-spacing: inherit;
-    font-size: 16px;
-    width: 100%;
+    font-size: 14px;
+   
     outline: none;
     border: none;
     color: ${({ theme }) => theme.text};
@@ -154,13 +155,13 @@ export const SSearch = styled.div`
   input:focus {
     color: ${({ theme }) => theme.text};
   }
-`;
 
-export const SSearchIcon = styled.button`
-  ${btnReset};
-  display: flex;
-  cursor: pointer;
-  svg {
-    font-size: 20px;
+  button {
+    ${btnReset};
+    display: flex;
+    cursor: pointer;
+    svg {
+      font-size: 16px;
+    }
   }
 `;

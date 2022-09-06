@@ -84,35 +84,15 @@ export const SCalendarTime = styled.div`
 export const SContainerWeek = styled.div`
   display: flex;
   border: 1px solid ${({ theme }) => theme.text};
-  border-right: 0px;
   border-radius: calc(${v.smSpacing} / 2);
+  border-right: 0px;
   overflow: hidden;
 `;
 
-export const SWrapperDayWeek = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+export const SOthers = styled.div`
+  margin-top: 10px;
+  border: 1px solid ${({ theme }) => theme.black};
+  border-radius: 4px;
+  overflow: hidden;
 
-export const SNameDayWeekLabel = styled.span`
-  background-color: ${({ theme }) => theme.gray};
-  padding: calc(${v.smSpacing} / 2);
-  text-align: center;
-  font-size: 12px;
-  border-right: 1px solid ${({ theme }) => theme.black};
-`;
-
-export const SDivider = styled.div`
-  width: 100%;
-  height: 1px;
-  background: ${({ theme }) => theme.black};
-`;
-
-export const SDayHour = styled.span`
-  background-color: ${({ theme }) => theme.primary};
-  color: ${({ theme }) => theme.white};
-  padding: calc(${v.smSpacing} / 2);
-  text-align: center;
-  font-size: 10px;
-  border-right: 1px solid ${({ theme }) => theme.black};
 `;

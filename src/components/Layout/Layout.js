@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Sidebar from '../Sidebar/Sidebar';
 import { SLayout, SMain } from './styles';
+import { isMobile } from 'react-device-detect';
 
 const Layout = ({ children }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -8,7 +9,7 @@ const Layout = ({ children }) => {
   return (
     <SLayout>
       <Sidebar sidebar={setSidebarOpen} />
-      <SMain sidebarOpen={sidebarOpen}>{children}</SMain>
+      <SMain sidebarOpen={sidebarOpen} isMobile={isMobile}>{children}</SMain>
     </SLayout>
   );
 };

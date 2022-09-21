@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { BsChevronDown, BsCheck2, BsSearch } from 'react-icons/bs';
 import { MdLocationCity } from 'react-icons/md';
-
 import * as SelectPrimitive from '@radix-ui/react-select';
+import { isMobile } from 'react-device-detect';
 
 import { Card } from '../../components/Card';
 import { api } from '../../services/api';
@@ -92,7 +92,7 @@ const HomePage = () => {
       <h1>Casas de Orações</h1>
       <h2>Dias de cultos e Reuniões Jovens e Menores</h2>
 
-      <SWrapperFilter >
+      <SWrapperFilter isMobile={isMobile}>
         <Select onValueChange={(text) => haldleFilterCity(text)}>
           <SSelectTrigger aria-label="Cidade">
             <SSelectTriggerWrapper>

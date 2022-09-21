@@ -35,6 +35,8 @@ export const SEmpty = styled.div`
 export const SWrapperFilter = styled.div`
   display: flex;
   flex-wrap: wrap;
+  width: ${({ isMobile }) => isMobile ? '100%' : '50%' };
+  background-color: ${({ theme }) => theme.grayLight};
   flex-direction: row;
   margin: ${v.lgSpacing} 0;
   gap: 10px;
@@ -50,7 +52,7 @@ export const SSelectTrigger = styled(SelectPrimitive.SelectTrigger)`
   font-size: 13px;
   line-height: 1;
   height: 35px;
-  width: 205px;
+  flex: 1;
   gap: 5px;
   background: ${({ theme }) => theme.white};
   color: ${({ theme }) => theme.text};
@@ -126,6 +128,7 @@ export const SSelectItemIndicator = styled(SelectPrimitive.ItemIndicator)`
 `;
 
 export const SSearch = styled.div`
+  flex: 1;
   background: ${({ theme }) => theme.white};
   height: 35px;
   box-shadow: 3px 3px 5px 3px ${({ theme }) => theme.grayLight};

@@ -7,7 +7,7 @@ export const SSidebar = styled.div`
   width: ${({ isOpen }) => (isOpen ? v.sidebarWidth : 'auto')};
   background: ${({ theme }) => theme.white};
   height: 100%;
-  padding: ${v.lgSpacing};
+  padding: ${({ isMobile }) => isMobile ? v.mdSpacing : v.lgSpacing};
 
   display: flex;
   flex-direction: column;

@@ -24,7 +24,7 @@ const Sidebar = ({ sidebar }) => {
   const { pathname } = useLocation();
 
   return (
-    <SSidebar isOpen={sidebarOpen}>
+    <SSidebar isOpen={sidebarOpen} isMobile={isMobile}>
       <SLogo isOpen={sidebarOpen}>
         <img src={logoSVG} alt="logo" />
       </SLogo>

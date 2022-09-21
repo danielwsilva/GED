@@ -33,18 +33,21 @@ export const Card = ({ data }) => {
         </SCalendarTime>
 
         <SContainerWeek>
-          <DayWeek day="SEG" hour={data.days_worship.monday} />
-          <DayWeek day="TER" hour={data.days_worship.tuesday} />
-          <DayWeek day="QUA" hour={data.days_worship.wednesday} />
-          <DayWeek day="QUI" hour={data.days_worship.thursday} />
-          <DayWeek day="SEX" hour={data.days_worship.friday} />
-          <DayWeek day="SAB" hour={data.days_worship.saturday} />
-          <DayWeek day="DOM" hour={data.days_worship.sunday} />
+          <DayWeek day="SEG" hour={data.daysWorship.monday} />
+          <DayWeek day="TER" hour={data.daysWorship.tuesday} />
+          <DayWeek day="QUA" hour={data.daysWorship.wednesday} />
+          <DayWeek day="QUI" hour={data.daysWorship.thursday} />
+          <DayWeek day="SEX" hour={data.daysWorship.friday} />
+          <DayWeek day="SAB" hour={data.daysWorship.saturday} />
+          <DayWeek day="DOM" hour={data.daysWorship.sunday} />
         </SContainerWeek>
 
-        <SOthers>
-          <DayWeek day="RJM" hour={data.days_worship.youth_meeting} width={80} hasBorder={false} />
-        </SOthers>
+        {
+          data.daysWorship.youth_meeting &&
+          <SOthers>
+            <DayWeek day="RJM" hour={data.daysWorship.youth_meeting} width={80} hasBorder={false} />
+          </SOthers>
+        }
       </SCard>
     </SContainerCard>
   );

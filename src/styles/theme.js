@@ -1,4 +1,4 @@
-export const lightTheme = {
+export const theme = {
     primary: "#033D60",
 
     white: "#ffffff",
@@ -11,13 +11,4 @@ export const lightTheme = {
 
     text: "#1e1e1e",
     textLight: "#989898"
-};
-
-export const darkTheme = {
-    bg: "rgb(15,15,15)",
-    bgAlpha: "rgba(0,0,0,.3)",
-    bg2: "rgb(30,30,30)",
-    bg3: "rgb(50,50,50)",
-    text: "rgb(210,210,210)",
-    primary: "rgb(52, 131, 235)",
 };

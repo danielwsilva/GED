@@ -38,7 +38,7 @@ export const SWrapperFilter = styled.div`
   width: ${({ isMobile }) => isMobile ? '100%' : '50%' };
   flex-direction: row;
   margin: ${v.lgSpacing} 0;
-  margin-right: 15px;
+  margin-right: 15px !important;
   gap: 10px;
 `;
 

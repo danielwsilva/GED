@@ -6,7 +6,7 @@ export const SLayout = styled.div`
 
 export const SMain = styled.main`
   padding-top: 20px;
-  padding-left: ${({ sidebarOpen, isMobile }) => sidebarOpen ? '270px' : isMobile ? '90px' : '120px' };
+  padding-left: ${({ sidebarOpen, isMobile }) => sidebarOpen ? '270px' : isMobile ? '95px' : '120px' };
   width: 100vw;
 
   h1 {

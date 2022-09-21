@@ -45,10 +45,10 @@ const Sidebar = ({ sidebar }) => {
         ))}
       </div>
 
-      <div style={{ margin: !sidebarOpen ? '0 auto' : '0', display: isMobile ? 'none' : 'inline' }}>
-        <SDivider />
+      <div style={{ margin: !sidebarOpen ? '0 auto' : '0'  }}>
+        <SDivider isMobile={isMobile} />
 
-        <div style={{ marginTop: 12, display: 'flex', alignItems: 'center' }}>
+        <div style={{ marginTop: 12, display: isMobile ? 'none' : 'flex', alignItems: 'center' }}>
           {sidebarOpen && <STSidebarLabel>Minimizar</STSidebarLabel>}
           <SSidebarButton
             isOpen={sidebarOpen}

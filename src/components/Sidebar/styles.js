@@ -47,7 +47,7 @@ export const SLogo = styled.div`
 `;
 
 export const SDivider = styled.div`
-  height: 1px;
+  height: ${({ isMobile }) => isMobile ? 0 : 1}px;
   width: 100%;
   background: ${({ theme }) => theme.grayLight};
   margin: ${v.lgSpacing} 0;

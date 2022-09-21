@@ -36,9 +36,9 @@ export const SWrapperFilter = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: ${({ isMobile }) => isMobile ? '100%' : '50%' };
-  background-color: ${({ theme }) => theme.grayLight};
   flex-direction: row;
   margin: ${v.lgSpacing} 0;
+  margin-right: 15px;
   gap: 10px;
 `;
 

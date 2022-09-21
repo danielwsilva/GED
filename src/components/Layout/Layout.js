@@ -3,7 +3,7 @@ import Sidebar from '../Sidebar/Sidebar';
 import { SLayout, SMain } from './styles';
 
 const Layout = ({ children }) => {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <SLayout>

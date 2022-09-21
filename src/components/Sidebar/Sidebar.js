@@ -3,6 +3,7 @@ import { AiOutlineLeft } from 'react-icons/ai';
 import { BiHomeAlt } from 'react-icons/bi';
 import { BsPinAngle } from 'react-icons/bs';
 import { useLocation } from 'react-router-dom';
+import { isMobile } from 'react-device-detect';
 
 import { logoSVG } from '../../assets';
 import {
@@ -19,7 +20,7 @@ import {
 } from './styles';
 
 const Sidebar = ({ sidebar }) => {
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
   const { pathname } = useLocation();
 
   return (
@@ -44,7 +45,7 @@ const Sidebar = ({ sidebar }) => {
         ))}
       </div>
 
-      <div style={{ margin: !sidebarOpen ? '0 auto' : '0' }}>
+      <div style={{ margin: !sidebarOpen ? '0 auto' : '0', display: isMobile ? 'none' : 'inline' }}>
         <SDivider />
 
         <div style={{ marginTop: 12, display: 'flex', alignItems: 'center' }}>

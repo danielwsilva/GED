@@ -18,7 +18,7 @@ export const SNameDayWeekLabel = styled.span`
 
 export const SDivider = styled.div`
   width: 100%;
-  height: 1px;
+  height: 0.1px;
   background: ${({ theme }) => theme.black};
 `;
 

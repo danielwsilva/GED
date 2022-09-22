@@ -7,9 +7,9 @@ import {
   SDayHour,
 } from './styles';
 
-export const DayWeek = ({ day, hour, width, hasBorder = true }) => {
+export const DayWeek = ({ day, hour, width }) => {
   return (
-    <SWrapperDayWeek hasCult={!!hour} width={width} hasBorder={hasBorder}>
+    <SWrapperDayWeek hasCult={!!hour} width={width}>
       <SNameDayWeekLabel>{day}</SNameDayWeekLabel>
       <SDivider />
       <SDayHour>{hour}</SDayHour>

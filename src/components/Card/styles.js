@@ -49,6 +49,7 @@ export const SCard = styled.div`
 export const SImage = styled.img`
   width: 130px;
   height: 130px;
+  margin-top: 10px;
   border: 2px solid ${({ theme }) => theme.gray};
   border-radius: ${v.xlSpacing};
   margin-bottom: ${v.smSpacing};
@@ -83,15 +84,14 @@ export const SCalendarTime = styled.div`
 
 export const SContainerWeek = styled.div`
   display: flex;
-  border: 1px solid ${({ theme }) => theme.text};
+  border: 0.1px solid ${({ theme }) => theme.text};
   border-radius: calc(${v.smSpacing} / 2);
-  border-right: 0px;
   overflow: hidden;
 `;
 
 export const SOthers = styled.div`
   margin-top: 10px;
-  border: 1px solid ${({ theme }) => theme.black};
+  border: 0.1px solid ${({ theme }) => theme.black};
   border-radius: 4px;
   overflow: hidden;
 

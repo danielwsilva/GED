@@ -1,5 +1,5 @@
 import React from 'react';
-import { BsPinAngle } from 'react-icons/bs';
+// import { BsPinAngle } from 'react-icons/bs';
 import { TbMap2, TbCalendarTime } from 'react-icons/tb';
 
 import Igreja from '../../assets/igreja.jpg';
@@ -15,7 +15,7 @@ export const Card = ({ data }) => {
   return (
     <SContainerCard>
       <SCard>
-        <BsPinAngle style={{ alignSelf: 'flex-end', marginBottom: 10 }} />
+        {/* <BsPinAngle style={{ alignSelf: 'flex-end', marginBottom: 10 }} /> */}
         <SImage src={Igreja} />
         <h1>{data.name}</h1>
         <h2>
@@ -39,7 +39,7 @@ export const Card = ({ data }) => {
           <DayWeek day="QUI" hour={data.daysWorship.thursday} />
           <DayWeek day="SEX" hour={data.daysWorship.friday} />
           <DayWeek day="SAB" hour={data.daysWorship.saturday} />
-          <DayWeek day="DOM" hour={data.daysWorship.sunday} />
+          <DayWeek day="DOM" hour={data.daysWorship.sunday} hasBorder={false}/>
         </SContainerWeek>
 
         {

@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 import { v } from '../../styles/variables';
 
@@ -7,10 +7,6 @@ export const SWrapperDayWeek = styled.div`
   flex-direction: column;
   background-color: ${({ theme, hasCult }) => hasCult ? theme.primary : theme.gray};
   width: ${({ width }) => width ? width : 36}px;
-
-  ${({ hasBorder }) => hasBorder && css`
-    border-right: 1px solid ${({ theme }) => theme.black};
-  `}
 `;
 
 export const SNameDayWeekLabel = styled.span`

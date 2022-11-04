@@ -1,22 +1,20 @@
 import React from 'react';
-// import { BsPinAngle } from 'react-icons/bs';
 import { TbMap2, TbCalendarTime } from 'react-icons/tb';
 
-import Igreja from '../../assets/igreja.jpg';
 import { DayWeek } from '../DayWeek';
-
-import { SContainerCard, SCard, SImage, SButtonMaps, SCalendarTime, SContainerWeek, SOthers } from './styles';
+import { SContainerCard, SCard, SButtonMaps, SCalendarTime, SContainerWeek } from './styles';
 
 export const Card = ({ data }) => {
   const showInMapClicked = () => {
     window.open(`https://www.google.com/maps?saddr=${data.latitude},${data.longitude}`);
   };
 
+  console.log(data);
+  const array = data.daysWorship.youth_meeting.split(' ');
+
   return (
     <SContainerCard>
       <SCard>
-        {/* <BsPinAngle style={{ alignSelf: 'flex-end', marginBottom: 10 }} /> */}
-        <SImage src={Igreja} />
         <h1>{data.name}</h1>
         <h2>
           {data.city}/{data.state}
@@ -40,14 +38,13 @@ export const Card = ({ data }) => {
           <DayWeek day="SEX" hour={data.daysWorship.friday} />
           <DayWeek day="SAB" hour={data.daysWorship.saturday} />
           <DayWeek day="DOM" hour={data.daysWorship.sunday} hasBorder={false}/>
+          
+          {
+            data.daysWorship.youth_meeting &&
+            <DayWeek day={`${array[0] === 'Domingo' && 'DOM'}/RJM `} hour={array[1]} />
+          }
         </SContainerWeek>
 
-        {
-          data.daysWorship.youth_meeting &&
-          <SOthers>
-            <DayWeek day="RJM" hour={data.daysWorship.youth_meeting} width={80} hasBorder={false} />
-          </SOthers>
-        }
       </SCard>
     </SContainerCard>
   );

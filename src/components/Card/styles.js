@@ -46,16 +46,6 @@ export const SCard = styled.div`
   }
 `;
 
-export const SImage = styled.img`
-  width: 130px;
-  height: 130px;
-  margin-top: 10px;
-  border: 2px solid ${({ theme }) => theme.gray};
-  border-radius: ${v.xlSpacing};
-  margin-bottom: ${v.smSpacing};
-  padding: 4px;
-`;
-
 export const SButtonMaps = styled.button`
   ${btnReset};
   margin-top: ${v.mdSpacing};
@@ -78,7 +68,7 @@ export const SCalendarTime = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-top: ${v.lgSpacing};
+  margin-top: ${v.smSpacing};
   margin-bottom: ${v.smSpacing};
 `;
 
@@ -87,12 +77,4 @@ export const SContainerWeek = styled.div`
   border: 0.1px solid ${({ theme }) => theme.text};
   border-radius: calc(${v.smSpacing} / 2);
   overflow: hidden;
-`;
-
-export const SOthers = styled.div`
-  margin-top: 10px;
-  border: 0.1px solid ${({ theme }) => theme.black};
-  border-radius: 4px;
-  overflow: hidden;
-
 `;

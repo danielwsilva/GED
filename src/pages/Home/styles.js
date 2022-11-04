@@ -24,12 +24,8 @@ export const SContainerCard = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding-right: ${v.xxlSpacing};
-`;
-
-export const SEmpty = styled.div`
-  width: 302px;
 `;
 
 export const SWrapperFilter = styled.div`

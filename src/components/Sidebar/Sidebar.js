@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { AiOutlineLeft } from 'react-icons/ai';
 import { BiHomeAlt } from 'react-icons/bi';
-// import { BsPinAngle } from 'react-icons/bs';
 import { useLocation } from 'react-router-dom';
 import { isMobile } from 'react-device-detect';
 
@@ -16,7 +15,7 @@ import {
   SLogo,
   SSidebar,
   SSidebarButton,
-  STSidebarLabel,
+  STSidebarLabel
 } from './styles';
 
 const Sidebar = ({ sidebar }) => {
@@ -71,13 +70,7 @@ const linksArray = [
     icon: <BiHomeAlt />,
     to: '/',
     notification: 0
-  },
-  // {
-  //   label: 'Fixados',
-  //   icon: <BsPinAngle />,
-  //   to: '/statistics',
-  //   notification: 3
-  // }
+  }
 ];
 
 export default Sidebar;

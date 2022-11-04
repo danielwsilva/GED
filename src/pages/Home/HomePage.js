@@ -6,12 +6,10 @@ import { isMobile } from 'react-device-detect';
 
 import { Card } from '../../components/Card';
 import { api } from '../../services/api';
-
 import {
   SContainer,
   SWrapperFilter,
   SContainerCard,
-  SEmpty,
   SSelectTrigger,
   SSelectTriggerWrapper,
   SStyledContent,
@@ -45,16 +43,6 @@ const HomePage = () => {
   useEffect(() => {
     fetchChurches();
   }, []);
-
-  const renderEmptyItems = () => (
-    <>
-      <SEmpty />
-      <SEmpty />
-      <SEmpty />
-      <SEmpty />
-      <SEmpty />
-    </>
-  );
 
   const handleSearch = (text) => {
     if (city !== 'todas') {
@@ -140,7 +128,7 @@ const HomePage = () => {
         {churche.map((item) => (
           <Card key={item.code} data={item} />
         ))}
-        {renderEmptyItems()}
+        
       </SContainerCard>
     </SContainer>
   );

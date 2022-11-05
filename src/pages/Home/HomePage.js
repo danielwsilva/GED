@@ -6,6 +6,7 @@ import { isMobile } from 'react-device-detect';
 
 import { Card } from '../../components/Card';
 import { api } from '../../services/api';
+
 import {
   SContainer,
   SWrapperFilter,

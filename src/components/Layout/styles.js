@@ -8,6 +8,7 @@ export const SMain = styled.main`
   padding-top: 20px;
   padding-left: ${({ sidebarOpen, isMobile }) => sidebarOpen ? '270px' : isMobile ? '85px' : '120px' };
   width: 100vw;
+  
 
   h1 {
     font-size: 14px;

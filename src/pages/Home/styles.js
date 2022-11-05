@@ -25,7 +25,6 @@ export const SContainerCard = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: flex-start;
-  padding-right: ${v.xxlSpacing};
 `;
 
 export const SWrapperFilter = styled.div`
